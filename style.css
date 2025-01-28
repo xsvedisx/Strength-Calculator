@@ -1,0 +1,162 @@
+body {
+  background: #f2f2f2;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: rgb(68, 68, 68);
+}
+.circle-chart {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: conic-gradient(#4caf50 0% 0%, #ececec 0% 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  margin: 20px auto;
+}
+.circle-chart::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.circle-chart span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(49, 49, 49);
+  font-size: 3rem;
+  font-weight: bold;
+}
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 30px;
+  background: linear-gradient(to right, #4caf50, #8bc34a);
+  width: 0;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-weight: bold;
+  transition: width 1s ease;
+}
+input[type="number"],
+select {
+  width: calc(100%);
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+label {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+#next-level-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.stars img {
+  width: 30px;
+  height: 30px;
+}
+.highlight {
+  font-weight: bold;
+  background-color: #1ca700;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 34, 34, 0.9)),
+    url("images/fitness.jpeg");
+  filter: grayscale(100%);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  margin: 0px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableContainer {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 568px) {
+  .container {
+    width: 100%;
+    gap: 0px;
+    display: block;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .header {
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+  }
+  .tableContainer {
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
